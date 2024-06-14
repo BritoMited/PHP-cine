@@ -8,10 +8,12 @@
 <body>
     <h1>login</h1>
     <form method="post">
-        <label>Usuario: </label>
-        <input type="text" name="" id="">
-        <label>Senha: </label>
-        <input type="password" name="" id="">
+    <section class="Login">
+        <button type="submit"><a href="login-page-usuario.php">LOGIN USUARIO</a></button>
+
+        <button type="submit"><a href="login-page-adm.php">LOGIN ADM</a></button>
     </form>
+    </section>
+    
 </body>
 </html>
