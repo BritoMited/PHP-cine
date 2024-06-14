@@ -44,7 +44,7 @@
     
      <?php
      
-     require_once 'banco.php';
+    require_once '../banco.php';
 
     $titulo = $_POST['titulo'];
     $descricao = $_POST['descricao'];
@@ -55,7 +55,7 @@
     $elenco = $_POST['elenco'];
     $rating = $_POST['rating'];
     $poster = $_POST['poster'];
-    $traile = $_POST['trailer'];
+    $trailer = $_POST['trailer'];
 
     criarFilme($titulo, $descricao,$data_lancamento,$duracao,$genero,$diretores,$elenco,$rating,$poster,$trailer);
      
