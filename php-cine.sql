@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14/06/2024 às 22:47
+-- Tempo de geração: 15/06/2024 às 23:23
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -31,10 +31,32 @@ CREATE TABLE `ingressos` (
   `Id` int(11) NOT NULL,
   `Id_usuario` int(11) NOT NULL,
   `Id_filme` int(11) NOT NULL,
-  `Quantidade` int(11) NOT NULL,
   `Assentos` varchar(10) NOT NULL,
   `Preco` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `ingressos`
+--
+
+INSERT INTO `ingressos` (`Id`, `Id_usuario`, `Id_filme`, `Assentos`, `Preco`) VALUES
+(2, 8, 4, 'A1', 10),
+(3, 8, 4, 'A2', 10),
+(4, 8, 4, 'A8', 10),
+(5, 8, 4, 'B1', 10),
+(6, 8, 4, 'A1', 10),
+(7, 8, 4, 'A2', 10),
+(8, 8, 4, 'A3', 10),
+(9, 8, 4, 'A1', 10),
+(10, 8, 4, 'B1', 10),
+(11, 8, 4, 'C1', 10),
+(12, 8, 4, 'A1', 10),
+(13, 8, 4, 'B1', 10),
+(14, 8, 4, 'A2', 10),
+(15, 8, 4, 'D5', 10),
+(16, 8, 4, 'D5', 10),
+(17, 8, 4, 'D8', 10),
+(18, 8, 4, 'A3', 10);
 
 -- --------------------------------------------------------
 
@@ -152,7 +174,7 @@ ALTER TABLE `login-usuario`
 -- AUTO_INCREMENT de tabela `ingressos`
 --
 ALTER TABLE `ingressos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `listafilmes`
