@@ -1,4 +1,4 @@
-<?php require_once 'config.php'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,25 +9,59 @@
 <body>
     <h1>Resumo da Compra</h1>
     <?php
-    if (isset($_SESSION['seats']) && !empty($_SESSION['seats'])) {
+
+    $seats = null;
+    $totalPreco = null;
+
+    require_once 'config.php';
+    require_once '../banco.php';
+
+    if (isset($_SESSION['seats'])) {
+
         $seats = $_SESSION['seats'];
         $totalPreco = $_SESSION['totalPreco'];
 
         echo '<p>Assentos Selecionados:</p>';
         echo '<ul>';
         foreach ($seats as $seat) {
-            echo '<li>' . htmlspecialchars($seat) . '</li>';
+            echo '<li>' . $seat . '</li>';
         }
         echo '</ul>';
         echo '<p>Total a Pagar: R$ ' . number_format($totalPreco, 2, ',', '.') . '</p>';
 
+        
+
         // Limpar a sessão após exibir o resumo
-        session_unset();
-        session_destroy();
+       
     } else {
         echo '<p>Nenhum assento foi selecionado.</p>';
     }
     ?>
-    <a href="index.php">Voltar</a>
+    <a href="payment-page.php">Voltar</a>
+    <form method="post">
+    <button name="compra" value="comprar">finalizar compra</button>
+    </form>
+
+<!-- quando clicar no botao de finalizar, ele limpa 
+
+session_unset();
+session_destroy(); -->
+
+<?php
+
+$compra = $_POST['compra'] ?? null;
+ 
+if($compra == "comprar"){
+    criarIngresso(8,4,$seat,$totalPreco/sizeof($seats));
+
+    session_unset();
+    session_destroy();
+
+    header('Location: payment-page.php');
+}
+
+
+?>
+
 </body>
 </html>

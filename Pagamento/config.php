@@ -7,4 +7,5 @@ session_start();
 function calcularPrecoTotal($seats, $precoPorAssento) {
     return count($seats) * $precoPorAssento;
 }
+
 ?>
