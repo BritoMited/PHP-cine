@@ -1,15 +1,9 @@
 <?php
+
 require_once '../banco.php';
+require_once 'login-verifier.php';
 
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-    if (isset($_POST['usuario']) && isset($_POST['senha'])) {
-        $usuario = $_POST['usuario'];
-        $senha = $_POST['senha'];
-     buscarUsuario($usuario, $senha);
-       
-}
+$adm = 0;
 
 ?>
 
@@ -26,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     <div class="container">
     <div class= "Login">
     <h1>Login Usuario</h1>
-    <form method="post" action="">
-        <input type="text" name="usuario" id="usuario" placeholder="Digite seu Usuário" required>
+    <form method="post">
+        <input type="text" name="usuario" placeholder="Digite seu Usuário" required>
         <br>
-        <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        <input type="password" name="senha" placeholder="Digite sua senha">
         <br>
         <input type="submit" value="Entrar">
         <p>Não tem uma conta?</p>

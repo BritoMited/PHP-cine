@@ -1,18 +1,10 @@
 <?php
 // Exemplo assumindo que "banco.php" está no mesmo diretório que "login-page-adm.php"
 require_once '../banco.php';
+require_once 'login-verifier.php';
 
-session_start();
+$adm = 10;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-    if (isset($_POST['usuario']) && isset($_POST['senha'])) {
-        $usuario = $_POST['usuario'];
-        $senha = $_POST['senha'];
-
-        // Verificar se o administrador existe no banco de dados
-        buscarUsuarioADM($usuario, $senha);
-       
-}
 ?>
 
 <!DOCTYPE html>
