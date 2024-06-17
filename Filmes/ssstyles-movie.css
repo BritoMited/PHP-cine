@@ -1,0 +1,72 @@
+*{
+    border-radius: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    padding-left: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container-2 {
+    max-width: 1400px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); 
+}
+
+.detalhes-filme {
+    margin-bottom: 20px;
+}
+.poster-filme {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+.informacoes-filme {
+    margin-top: 10px;
+}
+.informacoes-filme p {
+    margin: 5px 0;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+button:hover {
+    background-color: #0056b3;
+}
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p{
+    font-size: 20px;
+}
+.detalhes-container {
+    display: flex; 
+    align-items: center; 
+}
+
+.poster-filme {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    margin-right: 20px; 
+}
+
+.informacoes-filme {
+    flex: 1; 
+}
