@@ -46,25 +46,25 @@
     </form>
 </div>
     
-     <?php
+    <?php
      
     require_once '../banco.php';
 
-    $titulo = $_POST['titulo'] ?? null;
-    $descricao = $_POST['descricao'] ?? null;
-    $data_lancamento = $_POST['data_lancamento'] ?? null;
-    $duracao = $_POST['duracao']  ?? null ;
-    $genero = $_POST['genero'] ?? null;
-    $diretores = $_POST['diretores'] ?? null;
-    $elenco = $_POST['elenco'] ?? null;
-    $rating = $_POST['rating'] ?? null;
-    $poster = $_POST['poster'] ?? null;
-    $trailer = $_POST['trailer'] ?? null;
+    $titulo = $_POST['titulo'] ?? "";
+    $descricao = $_POST['descricao'] ?? "";
+    $data_lancamento = $_POST['data_lancamento'] ?? "";
+    $duracao = $_POST['duracao']  ?? "";
+    $genero = $_POST['genero'] ?? "";
+    $diretores = $_POST['diretores'] ?? "";
+    $elenco = $_POST['elenco'] ?? "";
+    $rating = $_POST['rating'] ?? "";
+    $poster = $_POST['poster'] ?? "";
+    $trailer = $_POST['trailer'] ?? "";
 
     criarFilme($titulo, $descricao,$data_lancamento,$duracao,$genero,$diretores,$elenco,$rating,$poster,$trailer);
      
      
-     ?>
+    ?>
 
 
 </body>

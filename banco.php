@@ -5,7 +5,7 @@ $banco = new mysqli("localhost", "root", "", "php-cine");
 
 // FILMES ======================
 
-function criarFilme(string $titulo, string $descricao, string $data_lancamento,string $duracao,string $genero,string $diretores,string $elenco,string $rating,string $poster,string $trailer) : void {
+function criarFilme(string $titulo, string $descricao, string $data_lancamento,string $duracao,string $genero,string $diretores,string $elenco,string $rating,string $poster,string $trailer){
         global $banco;
 
         $q = "INSERT INTO listafilmes(Id, 
@@ -31,7 +31,7 @@ function criarFilme(string $titulo, string $descricao, string $data_lancamento,s
                                         '$trailer')";
 
         $banco->query($q);
-
+        
        
     }
 

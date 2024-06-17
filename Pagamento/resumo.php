@@ -55,10 +55,7 @@
 <form method="post">
 <button name="compra" value="comprar">finalizar compra</button>
 </form>
-<!-- quando clicar no botao de finalizar, ele limpa 
 
-session_unset();
-session_destroy(); -->
 <?php
 
 $compra = $_POST['compra'] ?? null;
