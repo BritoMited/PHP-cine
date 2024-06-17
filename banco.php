@@ -1,4 +1,4 @@
-<pre>
+
 <?php
 
 $banco = new mysqli("localhost", "root", "", "php-cine");
@@ -43,17 +43,29 @@ function criarFilme(string $titulo, string $descricao, string $data_lancamento,s
         return $resp;
     }
 
+    function buscarFilme($id_filme){
+        global $banco;
+        $q = "SELECT `Titulo`, `Descricao`, `Lancamento`, `Duracao`, `Genero`, `Diretor`, `Elenco`, `Nota`, `Poster`, `Trailer` FROM `listafilmes` WHERE Id = '$id_filme'";
+        $resp = $banco->query($q);
+
+        return $resp;
+    }
+
 
     // LOGIN ==========================
     function buscarUsuario($usuario, $senha){
         global $banco;
 
-        $q = "SELECT * FROM login-usuario WHERE Usuario = $usuario AND Senha = $senha";
+        $q = "SELECT * FROM `login-usuario` WHERE Usuario = '$usuario' AND Senha = '$senha'";
 
         $busca = $banco->query($q);
 
-
-        return $busca;
+        if ($busca->num_rows == 0) {
+            return false;
+        }
+    
+        return true;
+    
     }
 
     function buscarUsuarioADM($usuario, $senha){
@@ -64,18 +76,17 @@ function criarFilme(string $titulo, string $descricao, string $data_lancamento,s
         $busca = $banco->query($q);
 
 
-        if ($busca) {
-            echo "deu certo";
-            header("Location: ../Filmes/ColocarFilme.php");
-        } else {
-            echo "Erro ao criar usuário: ";
+        if ($busca->num_rows == 0) {
+            return false;
         }
+    
+        return true;
     }
 
     function criarUsuario($usuario, $senha){
         global $banco;
 
-        $q = "INSERT INTO usuarios(usuario, senha) VALUES ('$usuario', '$senha')";
+        $q = "INSERT INTO `login-usuario`(Usuario, Senha) VALUES ('$usuario', '$senha')";
 
         $resp = $banco->query($q);
 
@@ -91,9 +102,26 @@ function criarFilme(string $titulo, string $descricao, string $data_lancamento,s
 
 // INGRESSOS ====================================
 
-
-function criarIngresso($Id_usuario, $Id_filme, $Assentos, $Preco){
+function buscarAssento($id_filme, $assento){
     global $banco;
+
+    $q = "SELECT Assentos FROM `ingressos` WHERE Id_filme = '$id_filme' AND Assentos = '$assento'";
+
+    $busca = $banco->query($q);
+
+    
+
+    if ($busca->num_rows == 0) {
+        return false;
+    }
+    return true;
+}
+
+
+function criarIngresso($usuario, $Id_filme, $Assentos, $Preco){
+    global $banco;
+
+    $Id_usuario = buscarIdUsuario($usuario);
 
     $q = "INSERT INTO `ingressos`(`Id`, `Id_usuario`, `Id_filme`, `Assentos`, `Preco`) 
                     VALUES (NULL,'$Id_usuario','$Id_filme','$Assentos','$Preco')";
@@ -106,7 +134,19 @@ function criarIngresso($Id_usuario, $Id_filme, $Assentos, $Preco){
    
 }
 
+function buscarIdUsuario($usuario){
+    global $banco;
 
+    $q = "SELECT Id FROM `login-usuario` WHERE Usuario = '$usuario'";
+
+    $busca = $banco->query($q);
+
+    $id = $busca->fetch_object();
+
+
+    return $id->Id;
+
+}
 
 
 
@@ -122,4 +162,3 @@ function criarIngresso($Id_usuario, $Id_filme, $Assentos, $Preco){
 
 ?>
 
-</pre>
