@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     <link rel="stylesheet" href="stylesLogin.css">
 </head>
 <body> 
+    <div class="container">
     <div class= "Login">
     <h1>Registrar Usuario</h1>
     <form method="post" action="">
@@ -33,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         <p>Já tem uma conta?</p>
         <a href="login-page-usuario.php" class="button" id="Registrar">Entre</a>
     </form> 
- </div>
+</div>
+</div>
 </body>
 </html>
