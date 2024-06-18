@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17/06/2024 às 06:17
+-- Tempo de geração: 18/06/2024 às 06:02
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -134,10 +134,13 @@ INSERT INTO `listafilmes` (`Id`, `Titulo`, `Descricao`, `Lancamento`, `Duracao`,
 (7, 'The Batman', 'Bruce Wayne, também conhecido como Batman, enfrenta a corrupção de Gotham City e um serial killer conhecido como The Riddler, que desafia o herói a resolver enigmas e mistérios para salvar a cidade.', '2022-03-04', '176', 'Ação, Crime, Drama', 'Matt Reeves', 'Robert Pattinson, Zoë Kravitz, Jeffrey Wright, Colin Farrell, Paul Dano', 'PG-13', 'https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SY679_.jpg', 'https://www.youtube.com/watch?v=mqqft2x_Aa4'),
 (8, 'No Time to Die', 'James Bond deixou o serviço ativo, mas sua paz é interrompida quando um velho amigo da CIA pede sua ajuda, levando Bond a confrontar um vilão armado com uma nova e perigosa tecnologia.', '2021-10-08', '163', 'Ação, Aventura, Thriller', 'Cary Joji Fukunaga', 'Daniel Craig, Léa Seydoux, Rami Malek, Lashana Lynch, Ralph Fiennes', 'PG-13', 'https://m.media-amazon.com/images/I/61VeYZhXKPL.__AC_SX300_SY300_QL70_ML2_.jpg', 'https://www.youtube.com/watch?v=BIhNsAtPbPI'),
 (9, 'Encanto', 'A jovem Mirabel Madrigal luta para encontrar seu lugar em sua família mágica, quando descobre que a magia da Encanto está em perigo, e ela pode ser a única esperança para salvar sua família e sua casa.', '2021-11-24', '102', 'Animação, Comédia, Família', 'Byron Howard, Jared Bush, Charise Castro Smith', 'Stephanie Beatriz, María Cecilia Botero, John Leguizamo, Mauro Castillo, Jessica Darrow', 'PG', 'https://m.media-amazon.com/images/I/91sfHsI1p4L._AC_SY550_.jpg', 'https://www.youtube.com/watch?v=CaimKeDcudo'),
-(80, '', '', '', '', '', '', '', '', '', ''),
-(81, '', '', '', '', '', '', '', '', '', ''),
-(82, '', '', '', '', '', '', '', '', '', ''),
-(83, '', '', '', '', '', '', '', '', '', '');
+(85, 'Divergente', 'Nesta versão futurista da cidade de Chicago, a sociedade se divide em cinco facções dedicadas ao cultivo de uma virtude – a Abnegação, a Amizade, a Audácia, a Franqueza e a Erudição. Aos dezesseis anos, numa grande cerimônia de iniciação, os jovens são su', '30 julho 2015', '2h 19m', 'Ação, Ficção Científica', 'Neil Burger', 'Shailene Woodley, Theo James, Miles Teller', '4,6', 'https://upload.wikimedia.org/wikipedia/pt/8/8e/Divergent.png', 'https://www.youtube.com/watch?v=B_fty0k6SNI'),
+(86, 'Insurgente', 'Uma escolha pode te destruir  Uma escolha pode te transformar - ou destruir. Mas toda escolha carrega consequências, e, enquanto uma sensação de inquietação assola as facções ao seu redor, Tris Prior precisa persistir em sua tentativa de salvar as pessoas', '19 de março de 2015', '1h 19m', 'Ação, Ficção Científica', 'Neil Burger', 'Shailene Woodley, Theo James, Miles Teller', '4,6', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw47qWTtxlEpd3-CPlUEdfZD8Px_3KldYdXg&s', 'https://www.youtube.com/watch?v=trbNyR8MHOs'),
+(87, 'Convergente', 'Tris e Quatro embarcam em uma jornada além da cerca ao redor de Chicago em busca de uma solução pacífica para a sua cidade, e acabam descobrindo a existência de uma nova sociedade.', '10 de março de 2016', '2h', 'Ação, Ficção Científica', 'Neil Burger', 'Shailene Woodley, Theo James, Miles Teller', '4,7', 'https://m.media-amazon.com/images/I/81yUSgsppWL._AC_UL320_.jpg', 'https://www.youtube.com/watch?v=ttdRr-Hw01g'),
+(88, 'Harry Potter e a Pedra Filosofal', 'Harry Potter é um garoto órfão que vive infeliz com seus tios, os Dursleys. Ele recebe uma carta contendo um convite para ingressar em Hogwarts, uma famosa escola especializada em formar jovens bruxos. Inicialmente, Harry é impedido de ler a carta por seu', ' 23 de novembro de 2001', '2h 32m', 'Ação, Fantasia, Ficcção', 'Chris Columbus', 'Daniel Radcliffe, Emma Watson, Rupert Grint, Alan Rickman, Robbie Coltrane, Tom Felton, Richard Harris', '5', 'https://m.media-amazon.com/images/I/A1NW0ocUylL._AC_UL320_.jpg', 'https://www.youtube.com/watch?v=P1BGgqhVGAI'),
+(89, 'Harry Potter e a Câmara Secreta', 'Após as sofríveis férias na casa dos tios, Harry Potter se prepara para voltar a Hogwarts e começar seu segundo ano na escola de bruxos. Na véspera do início das aulas, a estranha criatura Dobby aparece em seu quarto e o avisa de que voltar é um erro e qu', '2002', ' 2h 41m', 'Ação, Fantasia, Ficcção', 'Chris Columbus', 'Daniel Radcliffe, Emma Watson, Rupert Grint, Alan Rickman, Robbie Coltrane, Tom Felton, Richard Harris', '5', 'https://br.web.img3.acsta.net/medias/nmedia/18/93/01/50/20230712.jpg', 'https://www.youtube.com/watch?v=cf0rRYvDuys'),
+(90, 'Harry Potter e o Prisioneiro de Azkaban', 'É o início do terceiro ano na escola de bruxaria Hogwarts. Harry, Ron e Hermione têm muito o que aprender. Mas uma ameaça ronda a escola e ela se chama Sirius Black. Após doze anos encarcerado na prisão de Azkaban, ele consegue escapar e volta para vingar', '2004', '2h 27m', 'Ação, Fantasia, Ficcção', 'Chris Columbus', 'Daniel Radcliffe, Emma Watson, Rupert Grint, Alan Rickman, Robbie Coltrane, Tom Felton, Richard Harris', '4,7', 'https://br.web.img2.acsta.net/medias/nmedia/18/93/88/04/20282944.jpg', 'https://www.youtube.com/watch?v=lAxgztbYDbs'),
+(91, 'Harry Potter e o Cálice de Fogo', 'Harry retorna para seu quarto ano na Escola de Magia e Bruxaria de Hogwarts, junto com os seus amigos Ron e Hermione. Desta vez, acontece um torneio entre as três maiores escola de magia, com um participante selecionado de cada escola, pelo Cálice de Fogo', '2005', '2h 37m', 'Ação, Fantasia, Ficcção', 'Chris Columbus', 'Daniel Radcliffe, Emma Watson, Rupert Grint, Alan Rickman, Robbie Coltrane, Tom Felton, Richard Harris', '4,7', 'https://m.media-amazon.com/images/I/81jwDWnAmUL._AC_UL320_.jpg', 'https://www.youtube.com/watch?v=cVKkL4O60IM');
 
 -- --------------------------------------------------------
 
@@ -187,7 +190,8 @@ INSERT INTO `login-usuario` (`Id`, `Usuario`, `Senha`) VALUES
 (15, 'asda', 'asdasd'),
 (16, 'asda', 'asdasd'),
 (17, 'Britoca', '122'),
-(18, 'DinarteSeretni', 'DinarteSeretni');
+(18, 'DinarteSeretni', 'DinarteSeretni'),
+(19, 'Jean', 'jean');
 
 --
 -- Índices para tabelas despejadas
@@ -233,7 +237,7 @@ ALTER TABLE `ingressos`
 -- AUTO_INCREMENT de tabela `listafilmes`
 --
 ALTER TABLE `listafilmes`
-  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT de tabela `login-adm`
@@ -245,7 +249,7 @@ ALTER TABLE `login-adm`
 -- AUTO_INCREMENT de tabela `login-usuario`
 --
 ALTER TABLE `login-usuario`
-  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Restrições para tabelas despejadas
